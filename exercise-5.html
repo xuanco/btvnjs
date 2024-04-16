@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h2{color: blue;}
+        button{margin-left: 120px;}
+        input{margin-bottom:20px;}
+        h3{font-style: italic}
+    </style>
+</head>
+<body>
+<h2>diem trung binh ky</h2>
+<label>Dien ky giua ky:</label>
+<input type="number" id="middle" placeholder="number"><br>
+<label>Diem cuoi ky:</label>
+<input type="number" id="last" placeholder="number"><br>
+<button onclick="getdata()">Click</button>
+<h3 id="result"></h3>
+
+<script>
+    function getdata(){
+        let a=document.getElementById('middle').value;
+        let b=document.getElementById('last').value;
+        let c=+a;
+        let d=+b
+        let e=c+d;
+        if((e/2)<5){document.getElementById('result').innerHTML='Hoc luc yeu'}
+        if((e/2)>=5 && (e/2)<7){document.getElementById('result').innerHTML='Hoc luc trung binh'}
+        if((e/2)>=7 && (e/2)<8){document.getElementById('result').innerHTML='Hoc luc kha'}
+        if((e/2)>=8 && (e/2)<=9){document.getElementById('result').innerHTML='Hoc luc Gioi'}
+        if((e/2)>9 && (e/2)<=10){document.getElementById('result').innerHTML='Hoc luc xuat sac'}
+    }
+</script>
+</body>
+</html>
